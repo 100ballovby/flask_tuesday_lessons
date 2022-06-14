@@ -3,6 +3,7 @@ from flask import Flask
 
 app = Flask(__name__)
 # связываю сайт с главным файлом проекта
+app.config['SECRET_KEY'] = 'try-to-guess'
 
 from routes import *
 

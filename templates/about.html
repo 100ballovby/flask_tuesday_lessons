@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">{{ message }}</div>
+    {% endfor %}
+
+
+    <form action="" method="post">
+        <div class="mb-3">
+            <input type="text" name="username" placeholder="Иван Петров" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="email" name="email" placeholder="yourmail@gmail.com" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="phone" placeholder="+375291234567" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Отправить" class="btn btn-primary">
+        </div>
+    </form>
+    
+{% endblock %}
