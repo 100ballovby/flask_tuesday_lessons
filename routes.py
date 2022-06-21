@@ -3,6 +3,7 @@ from flask import render_template, redirect, url_for, request, flash
 
 messages = []
 
+
 @app.route('/')  # пишу функцию для главной страницы
 def main_page():
     # функция просто генерирует пользователю шаблон главной страницы
