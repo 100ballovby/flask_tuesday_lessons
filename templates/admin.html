@@ -3,11 +3,11 @@
 {% block content %}
     <h1>Сообщения пользователей</h1>
 
-    {% for message in user_messages %}
+    {% for user in users %}
         <div class="card mb-2">
-            <div class="card-header">{{ message.username }}</div>
+            <div class="card-header">{{ user.name }}</div>
             <div class="card-body">
-                {{ message.email }}, {{ message.phone }}
+                {{ user.email }}, {{ user.phone }}
             </div>
         </div>
     {% endfor %}
