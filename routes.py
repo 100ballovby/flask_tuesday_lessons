@@ -1,10 +1,13 @@
+import os
 import sqlite3
 from app import app
 from flask import render_template, redirect, url_for, request, flash
 
+DB_ROOT = os.path.dirname(os.path.realpath(__file__))
+
 
 def db_connect():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect(os.path.join(DB_ROOT, 'database.db'))
     conn.row_factory = sqlite3.Row  # выгружаю строки из базы данных
     return conn
 
